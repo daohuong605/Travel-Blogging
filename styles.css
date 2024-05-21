@@ -197,7 +197,7 @@ nav {
   margin: auto;
 }
 
-.discover {
+.category {
   background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.05),
@@ -205,27 +205,27 @@ nav {
   );
 }
 
-.discover__grid {
+.category__grid {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.discover__card {
+.category__card {
   max-width: 320px;
   margin: auto;
 }
 
-.discover__card:nth-child(2) {
+.category__card:nth-child(2) {
   transform: translateY(5rem);
 }
 
-.discover__image {
+.category__image {
   position: relative;
 }
 
-.discover__image::after {
+.category__image::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -235,12 +235,12 @@ nav {
   background-image: linear-gradient(to top, var(--primary-color), transparent);
 }
 
-.discover__card__content {
+.category__card__content {
   padding: 0 2rem;
   transform: translateY(-50%);
 }
 
-.discover__card__content h4 {
+.category__card__content h4 {
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 800;
@@ -248,11 +248,11 @@ nav {
   color: var(--secondary-color);
 }
 
-.discover__card__content p {
+.category__card__content p {
   margin-bottom: 2rem;
 }
 
-.discover__btn {
+.category__btn {
   padding: 0.75rem 1rem;
   outline: none;
   font-size: 1rem;
@@ -297,60 +297,60 @@ nav {
   z-index: 1;
 }
 
-.journals__grid {
+.journal__grid {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.journals__content {
+.journal__content {
   padding: 2rem;
   background-color: var(--primary-color-light);
 }
 
-.journals__author {
+.journal__author {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.journals__author img {
+.journal__author img {
   max-width: 30px;
   border-radius: 100%;
 }
 
-.journals__author p {
+.journal__author p {
   font-size: 0.9rem;
   opacity: 0.75;
 }
 
-.journals__content h4 {
+.journal__content h4 {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.journals__footer {
+.journal__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.journals__footer p {
+.journal__footer p {
   font-size: 0.9rem;
   opacity: 0.5;
 }
 
-.journals__footer span a {
+.journal__footer span a {
   font-size: 1.5rem;
   color: var(--white);
   opacity: 0.75;
 }
 
-.journals__btn {
+.journal__btn {
   margin-top: 4rem;
   text-align: center;
 }
@@ -608,4 +608,8 @@ nav {
   .contact__col:first-child {
     grid-area: unset;
   }
+}
+
+*{
+  box-sizing: border-box;
 }
