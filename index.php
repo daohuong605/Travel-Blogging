@@ -144,23 +144,40 @@
       </div>
     </section>
 
+<<<<<<< HEAD
     <section class="journal" id="journal">
       <div class="section__container journal__container">
+=======
+    <section class="journals" id="journals">
+      <div class="section__container journals__container">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
         <h2 class="section__header">The travel journals</h2>
         <p class="section__subheader">
           A journal is a place to record new things you have discovered while
           exploring various places you visit.
         </p>
+<<<<<<< HEAD
         <div class="journal__grid">
           <div class="journal__card">
             <img src="assets/journals-1.jpg" alt="journal" />
             <div class="journal__content">
               <div class="journal__author">
+=======
+        <div class="journals__grid">
+          <div class="journals__card">
+            <img src="assets/journals-1.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <img src="assets/author-1.jpg" alt="author" />
                 <p>By Marry Ann</p>
               </div>
               <h4>How to use less plastic when you travel.</h4>
+<<<<<<< HEAD
               <div class="journal__footer">
+=======
+              <div class="journals__footer">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <p>18 Apr 2022</p>
                 <span>
                   <a href="#"><i class="ri-share-fill"></i></a>
@@ -168,15 +185,26 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <div class="journal__card">
             <img src="assets/journals-2.jpg" alt="journal" />
             <div class="journal__content">
               <div class="journal__author">
+=======
+          <div class="journals__card">
+            <img src="assets/journals-2.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <img src="assets/author-2.jpg" alt="author" />
                 <p>By Austin Martin</p>
               </div>
               <h4>The best weekend road trips from Denver.</h4>
+<<<<<<< HEAD
               <div class="journal__footer">
+=======
+              <div class="journals__footer">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <p>22 Jun 2022</p>
                 <span>
                   <a href="#"><i class="ri-share-fill"></i></a>
@@ -184,15 +212,26 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <div class="journal__card">
             <img src="assets/journals-3.jpg" alt="journal" />
             <div class="journal__content">
               <div class="journal__author">
+=======
+          <div class="journals__card">
+            <img src="assets/journals-3.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <img src="assets/author-3.jpg" alt="author" />
                 <p>By Anina Joseph</p>
               </div>
               <h4>Tips and tricks to plan your next adventure.</h4>
+<<<<<<< HEAD
               <div class="journal__footer">
+=======
+              <div class="journals__footer">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <p>05 Sep 2022</p>
                 <span>
                   <a href="#"><i class="ri-share-fill"></i></a>
@@ -200,15 +239,26 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <div class="journal__card">
             <img src="assets/journals-4.jpg" alt="journal" />
             <div class="journal__content">
               <div class="journal__author">
+=======
+          <div class="journals__card">
+            <img src="assets/journals-4.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <img src="assets/author-4.jpg" alt="author" />
                 <p>By Jacob Fernandez</p>
               </div>
               <h4>A beginner's guide to hostel's.</h4>
+<<<<<<< HEAD
               <div class="journal__footer">
+=======
+              <div class="journals__footer">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <p>14 Dec 2022</p>
                 <span>
                   <a href="#"><i class="ri-share-fill"></i></a>
@@ -216,15 +266,26 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <div class="journal__card">
             <img src="assets/journals-5.jpg" alt="journal" />
             <div class="journal__content">
               <div class="journal__author">
+=======
+          <div class="journals__card">
+            <img src="assets/journals-5.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <img src="assets/author-5.jpg" alt="author" />
                 <p>By John Smith</p>
               </div>
               <h4>17 unconventional travel hacks you need.</h4>
+<<<<<<< HEAD
               <div class="journal__footer">
+=======
+              <div class="journals__footer">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <p>10 Feb 2022</p>
                 <span>
                   <a href="#"><i class="ri-share-fill"></i></a>
@@ -232,15 +293,26 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <div class="journal__card">
             <img src="assets/journals-6.jpg" alt="journal" />
             <div class="journal__content">
               <div class="journal__author">
+=======
+          <div class="journals__card">
+            <img src="assets/journals-6.jpg" alt="journal" />
+            <div class="journals__content">
+              <div class="journals__author">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <img src="assets/author-6.jpg" alt="author" />
                 <p>By Aaran Kennedy</p>
               </div>
               <h4>Travel tip's you'll wish you'd known sooner.</h4>
+<<<<<<< HEAD
               <div class="journal__footer">
+=======
+              <div class="journals__footer">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
                 <p>20 Mar 2023</p>
                 <span>
                   <a href="#"><i class="ri-share-fill"></i></a>
@@ -249,7 +321,11 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="journal__btn">
+=======
+        <div class="journals__btn">
+>>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
           <button class="btn">
             View All Journals <i class="ri-arrow-right-line"></i>
           </button>
