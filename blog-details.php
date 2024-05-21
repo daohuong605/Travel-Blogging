@@ -17,11 +17,11 @@
     <?php include('header.php'); ?>
         <section class="blog" id="detailed_blog">
             <div class="section__container blog__details">
-                <div class="journals__author">
+                <div class="journal__author">
                     <img src="assets/author-5.jpg" alt="author" />
                     <p>By John Smith</p>
                 </div>
-                <div class="journals__footer">
+                <div class="journal__footer">
                     <p>10 Feb 2022</p>
                     <span>
                     <a href="#"><i class="ri-share-fill"></i></a>

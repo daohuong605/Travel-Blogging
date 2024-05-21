@@ -19,12 +19,7 @@
           <ul class="nav__links">
             <li class="link"><a href="index.php">Home</a></li>
             <li class="link"><a href="about.php">About Us</a></li>
-<<<<<<< HEAD
-            <li class="link"><a href="category.php">Category</a></li>
-=======
-            <li class="link"><a href="discover.php">Discover</a></li>
-            <li class="link"><a href="categories.php">Category</a></li>
->>>>>>> 3bec55014980cf0183ef64d7e89ab3265714786f
+            <li class="link"><a href="Category.php">Category</a></li>
             <li class="link"><a href="blog.php">Journals</a></li>
             <li class="link"><a href="#contact">Contact</a></li>
             <li class="link"><a href="login.php">Login</a></li>

@@ -297,60 +297,60 @@ nav {
   z-index: 1;
 }
 
-.journal__grid {
+.journals__grid {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.journal__content {
+.journals__content {
   padding: 2rem;
   background-color: var(--primary-color-light);
 }
 
-.journal__author {
+.journals__author {
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.journal__author img {
+.journals__author img {
   max-width: 30px;
   border-radius: 100%;
 }
 
-.journal__author p {
+.journals__author p {
   font-size: 0.9rem;
   opacity: 0.75;
 }
 
-.journal__content h4 {
+.journals__content h4 {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.journal__footer {
+.journals__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.journal__footer p {
+.journals__footer p {
   font-size: 0.9rem;
   opacity: 0.5;
 }
 
-.journal__footer span a {
+.journals__footer span a {
   font-size: 1.5rem;
   color: var(--white);
   opacity: 0.75;
 }
 
-.journal__btn {
+.journals__btn {
   margin-top: 4rem;
   text-align: center;
 }
