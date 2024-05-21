@@ -22,34 +22,36 @@
         <div class="category__grid">
           <div class="category__card">
             <div class="category__image">
-              <img src="assets/discover-1.jpg" alt="category" />
+              <img src="assets/food-cate.jpg" alt="category" />
             </div>
             <div class="category__card__content">
-              <h4>Norway</h4>
+              <h4>Food Traveling</h4>
               <p>
-                Discover the untamed beauty of Norway, a land where rugged
-                mountains, and enchanting northern lights paint a surreal
-                backdrop.
+              Food travel bloggers often write about local restaurants, 
+              street food experiences, and unique food experiences.
               </p>
-              <button class="category__btn">
-                Read More <i class="ri-arrow-right-line"></i>
-              </button>
+              <a href="FoodDetails.php">
+                <button class="category__btn">
+                    Read More <i class="ri-arrow-right-line"></i>
+                </button>
+              </a>
             </div>
           </div>
           <div class="category__card">
             <div class="category__image">
-              <img src="assets/discover-2.jpg" alt="category" />
+              <img src="assets/adventure-cate.jpg" alt="category" />
             </div>
             <div class="category__card__content">
-              <h4>London</h4>
+              <h4>Adventure Traveling</h4>
               <p>
-                From urban rock climbing to twilight cycling through royal
-                parks, London beckons adventure enthusiasts to embrace
-                opportunities.
+              Adventure travel bloggers often write about hiking, camping, 
+              rock climbing, and other outdoor activities.
               </p>
-              <button class="category__btn">
-                Read More <i class="ri-arrow-right-line"></i>
-              </button>
+              <a href="AdventureDetails.php">
+                <button class="category__btn">
+                    Read More <i class="ri-arrow-right-line"></i>
+                </button>
+              </a>
             </div>
           </div>
           <div class="category__card">
@@ -57,15 +59,15 @@
               <img src="assets/discover-3.jpg" alt="category" />
             </div>
             <div class="category__card__content">
-              <h4>Japan</h4>
-              <p>
-                From scaling the iconic peaks of Mount Fuji to immersing in the
-                serenity, Japan offers adventurers a captivating cultural
-                treasures.
+              <h4>Cultural Traveling</h4>
+              <p> 
+              Cultural travel bloggers often write about history, art, architecture, and other aspects of local cultures.
               </p>
-              <button class="category__btn">
-                Read More <i class="ri-arrow-right-line"></i>
-              </button>
+              <a href="CulturalDetails.php">
+                <button class="category__btn">
+                    Read More <i class="ri-arrow-right-line"></i>
+                </button>
+              </a>
             </div>
           </div>
         </div>
