@@ -30,7 +30,7 @@ if ($_POST){
     $phone = $_POST['phone'];
     $yob = $_POST['yob'];
     $city = $_POST['city'];
-    $fileImage = $_FILES['fileImage'];
+    $fileImage = $_FILES['file'];
 
     // $image_path = $user['image'];
 
@@ -124,7 +124,7 @@ if ($_POST){
         </div>
         <div class="form-group">
             <label class="form-label" for="fileImage">File Image</label>
-            <input class="form-control" type="file" name="fileImage" id="fileImage">
+            <input class="form-control" type="file" name="file" id="fileImage">
             
             <?php if (isset($errors['fileImage'])): ?>
                 <p class="text-danger"><?php echo $errors['fileImage']; ?></p>

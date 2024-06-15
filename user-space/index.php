@@ -76,39 +76,41 @@ mysqli_close($conn);
     </section>
 
     <section class="category" id="category">
-    <div class="section__container category__container">
-        <h2 class="section__header">Latest on the blogs</h2>
-        <p class="section__subheader">We want to help you to travel better!</p>
-        <div class="category__grid">
-            <?php foreach ($categories as $category): ?>
-            <div class="category__card">
-                <div class="category__image">
-                    <img src="<?php echo $category['image']; ?>" alt="category">
-                </div>
-                <div class="category__card__content">
-                    <h4><?php echo $category['cate_name']; ?></h4>
-                    <p>
-                        <?php echo $category['description']; ?>
-                    </p>
-                    <?php if (!isset($_SESSION['username'])): ?>
-                    <a href="../auth/login.php">
-                        <button class="category__btn">
-                            Read More <i class="ri-arrow-right-line"></i>
-                        </button>
-                    </a>
-                    <?php else: ?>
-                    <a href="FoodDetails.php?cate_id=<?php echo $category['cate_id']; ?>">
-                        <button class="category__btn">
-                            Read More <i class="ri-arrow-right-line"></i>
-                        </button>
-                    </a>
-                    <?php endif; ?>
-                </div>
+        <div class="section__container category__container">
+            <h2 class="section__header">Latest on the blogs</h2>
+            <p class="section__subheader">We want to help you to travel better!</p>
+            <div class="category__grid">
+                <?php if (empty($categories)): ?>
+                    <p>No categories found.</p>
+                <?php else: ?>
+                    <?php foreach ($categories as $category): ?>
+                        <div class="category__card">
+                            <div class="category__image">
+                                <img src="<?php echo $category['image']; ?>" alt="category">
+                            </div>
+                            <div class="category__card__content">
+                                <h4><?php echo $category['cate_name']; ?></h4>
+                                <p><?php echo $category['description']; ?></p>
+                                <?php if (!isset($_SESSION['username'])): ?>
+                                    <a href="../auth/login.php">
+                                        <button class="category__btn">
+                                            Read More <i class="ri-arrow-right-line"></i>
+                                        </button>
+                                    </a>
+                                <?php else: ?>
+                                    <a href="FoodDetails.php?cate_id=<?php echo $category['cate_id']; ?>">
+                                        <button class="category__btn">
+                                            Read More <i class="ri-arrow-right-line"></i>
+                                        </button>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
-            <?php endforeach; ?>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <section class="blogs" id="blog">
@@ -147,45 +149,48 @@ mysqli_close($conn);
     </section>
 
     <section class="journals" id="journals">
-      <div class="section__container journals__container">
-        <h2 class="section__header">The travel journals</h2>
-        <p class="section__subheader">
-          A journal is a place to record new things you have discovered while
-          exploring various places you visit.
-        </p>
-        <div class="journals__grid">
-        <?php foreach ($articles as $article): ?>
-          <div class="journals__card">
-            <a href="blog-details.php?article_id=<?php echo $article['article_id']; ?>" class="journals__link">
-                <img src="<?php echo $article['image']; ?>" alt="journal" />
-                <div class="journals__content">
-                    <div class="journals__author">
-                        <img src="../assets/author-1.jpg" alt="author" />
-                        <p style="color: white;">By Marry Ann</p>
-                    </div>
-                    <h4 style="color: white;"><?php echo $article['title']; ?></h4>
-                    <div class="journals__footer">
-                        <p style="color: white;"><?php echo $article['create_at']; ?></p>
-                        <span>
-                            <a href="#"><i style="color: white;" class="ri-share-fill"></i></a>
-                        </span>
-                    </div>
-                </div>
-            </a>
+        <div class="section__container journals__container">
+            <h2 class="section__header">The travel journals</h2>
+            <p class="section__subheader">
+                A journal is a place to record new things you have discovered while
+                exploring various places you visit.
+            </p>
+            <div class="journals__grid">
+                <?php if (empty($articles)): ?>
+                    <p>No articles found.</p>
+                <?php else: ?>
+                    <?php foreach ($articles as $article): ?>
+                        <div class="journals__card">
+                            <a href="blog-details.php?article_id=<?php echo $article['article_id']; ?>" class="journals__link">
+                                <img src="<?php echo $article['image']; ?>" alt="journal" />
+                                <div class="journals__content">
+                                    <div class="journals__author">
+                                        <img src="../assets/author-1.jpg" alt="author" />
+                                        <p style="color: white;">By Marry Ann</p>
+                                    </div>
+                                    <h4 style="color: white;"><?php echo $article['title']; ?></h4>
+                                    <div class="journals__footer">
+                                        <p style="color: white;"><?php echo $article['create_at']; ?></p>
+                                        <span>
+                                            <a href="#"><i style="color: white;" class="ri-share-fill"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+            <div class="journals__btn">
+                <?php if (!isset($_SESSION['username'])): ?>
+                    <a href="../auth/login.php">
+                        <button class="btn">
+                            View All Journals <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                <?php endif; ?>
+            </div>
         </div>
-
-
-        <?php endforeach; ?>
-        </div>
-        <div class="journals__btn">
-        <?php if (!isset($_SESSION['username'])): ?>
-          <a href="../auth/login.php">
-          <button class="btn">
-            View All Journals <i class="ri-arrow-right-line"></i>
-          </button>
-        <?php endif; ?>
-        </div>
-      </div>
     </section>
 
     <section class="hero">

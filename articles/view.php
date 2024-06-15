@@ -56,7 +56,7 @@ $page = 1;
 if(isset($_GET['page'])) {
     $page = $_GET['page'];
 }
-$limit = 2; // no. articles per page
+$limit = 1; // no. articles per page
 $offset = ($page - 1) * $limit;
 
 // -- count no.articles

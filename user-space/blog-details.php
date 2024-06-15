@@ -1,6 +1,6 @@
 <?php
 // Require login
-include('../shared/_required-admin.php');
+include('../shared/_required-login.php');
 
 // Include database connection
 include('../db/connect-db.php');

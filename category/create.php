@@ -49,7 +49,7 @@ if ($_POST) {
 
     // if no errors
     if (empty($errors)) {
-        // move uploaded file from /tmp to /uploads 
+        // move uploaded file from /tmp to /uploads -
         $image = '../uploads/'.$fileImage['name'];
         move_uploaded_file($fileImage['tmp_name'], $image);
 

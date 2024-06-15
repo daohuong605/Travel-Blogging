@@ -16,13 +16,13 @@ $cate_name = '';
 $description = '';
 
 
-if (isset($_GET['cate_name']) && !empty($_GET['cate_name'])) {
-    $cate_name = $_GET['cate_name'];
+if (isset($_POST['cate_name']) && !empty($_POST['cate_name'])) {
+    $cate_name = $_POST['cate_name'];
     
     $sql .= " AND cate_name LIKE '%$cate_name%'";
 }
-if (isset($_GET['description']) && !empty($_GET['description'])) {
-    $description = $_GET['description'];
+if (isset($_POST['description']) && !empty($_POST['description'])) {
+    $description = $_POST['description'];
     
     $sql .= " AND description LIKE '%$description%'";
 }
@@ -87,7 +87,7 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <br/> <br/>
     <h1>All Categories</h1>
     <a class="btn btn-success" href="create.php">Create a new category</a> <br/> <br/>
-    <form action="" method="get">
+    <form action="" method="POST">
         <div class="row my-3">
             <div class="col-3">
                 <input class="form-control" type="text" name="cate_name" placeholder="Category name" value="<?php echo $cate_name; ?>">
