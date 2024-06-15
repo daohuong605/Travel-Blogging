@@ -1,17 +1,18 @@
 <?php
+
+$cate_id = $_GET['cate_id'];
 // connect to database
 include('../db/connect-db.php');
-
 // get cate by id
-$sql = "SELECT * FROM `categories` WHERE 1 "; 
-$result = @mysqli_query($conn, $sql);
 
+$sql = "SELECT * FROM `categories` WHERE cate_id = $cate_id"; 
+$result = @mysqli_query($conn, $sql);
 $cate = mysqli_fetch_assoc($result);
 
 // close connection
 mysqli_close($conn);
 
-// -- handle post data
+// -- TODO: handle post data
 if ($_POST) {
     // -- get user data
     $cate_name = $_POST['cate_name'];
@@ -27,24 +28,17 @@ if ($_POST) {
         $image_path = '../uploads/' . basename($fileImage['name']);
         move_uploaded_file($fileImage['tmp_name'], $image_path);
     }
-
     // connect db
     include('../db/connect-db.php');
-
     // update db
     $sql = "UPDATE `categories` 
             SET `cate_name` = '$cate_name', `description` = '$description', `image` = '$image_path'
             WHERE `cate_id` = " . $cate['cate_id'];
-
     $result = mysqli_query($conn, $sql);
-
-    // expected always successful
-    
     // close connection
     mysqli_close($conn);
-
     // redirect to view all cars
-    header('location: ../category/index.php');
+    header('location: index.php');
     exit();
 }
 ?>

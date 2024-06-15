@@ -36,7 +36,8 @@ if (!$article) {
     exit();
 }
 
-// Display article details (update HTML structure as needed)
+// Close database connection
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +47,7 @@ if (!$article) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Bootstrap JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title><?php echo htmlspecialchars($article['title']); ?></title>
@@ -81,15 +81,16 @@ if (!$article) {
     <!-- Add additional CSS and JS links as needed -->
 </head>
 <body>
-    <?php include('header.php')?>
+    <?php include('header.php'); ?>
     <div class="container">
-        <!-- Display article details -->
-        <h1><?php echo htmlspecialchars($article['title']); ?></h1>
-        <p><?php echo htmlspecialchars($article['content']); ?></p>
-        <img src="<?php echo htmlspecialchars($article['image']); ?>" alt="<?php echo htmlspecialchars($article['title']); ?>">
-        <!-- Add additional article details as needed -->
-    </div>
-    <?php include('comment.php')?>
-    <?php include('footer.php')?>
+            <!-- Display article details -->
+            <h1><?php echo htmlspecialchars($article['title']); ?></h1>
+            <p>Created at: <?php echo htmlspecialchars($article['create_at']); ?></p>
+            <p><?php echo htmlspecialchars($article['content']); ?></p>
+            <img src="<?php echo htmlspecialchars($article['image']); ?>" alt="<?php echo htmlspecialchars($article['title']); ?>">
+            <!-- Add additional article details as needed -->
+        </div>
+   <?php include('comment.php'); ?>
+    <?php include('footer.php'); ?>
 </body>
 </html>

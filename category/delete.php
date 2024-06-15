@@ -7,8 +7,7 @@ $cate_id = $_GET['cate_id'];
 include('../db/connect-db.php');
 
 // delete from db
-$cate_id = mysqli_real_escape_string($conn, $cate_id);
-$sql = "DELETE FROM `categories` WHERE `cate_id` = $cate_id";
+$sql = "DELETE FROM `categories` WHERE `categories`.`cate_id` = $cate_id";
 $result = @mysqli_query($conn, $sql);
 // expected always successful
 
@@ -16,4 +15,4 @@ $result = @mysqli_query($conn, $sql);
 @mysqli_close($conn);
 
 // -- redirect to view all categories
-header("location:../category/index.php");
+header('location: index.php');

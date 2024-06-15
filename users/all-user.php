@@ -5,38 +5,65 @@ include('../shared/_required-admin.php');
 // Include database connection file
 include('../db/connect-db.php');
 
-// Define default values
+// Initialize default values
 $page = isset($_GET['page']) ? $_GET['page'] : 1; // Current page number
 $perPage = 10; // Number of users per page
 
-// Query for all users
-$sql = "SELECT * FROM `users` ORDER BY id ASC";
-$result = mysqli_query($conn, $sql);
+// Start with base SQL query to select all users
+$sql = "SELECT * FROM `users`";
 
-// Process results
-if ($result) {
-    $totalUsers = mysqli_num_rows($result); // Total number of users
-    $noPages = ceil($totalUsers / $perPage); // Total number of pages
-    $offset = ($page - 1) * $perPage; // Offset for pagination
-    $sql .= " LIMIT $perPage OFFSET $offset";
-    $result = mysqli_query($conn, $sql);
-    
-    if ($result) {
-        $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        // Free result
-        mysqli_free_result($result);
-    } else {
-        $users = [];
-        $error = "Error fetching users: " . mysqli_error($conn);
-    }
-} else {
-    $users = [];
-    $error = "Error fetching users: " . mysqli_error($conn);
+// Initialize variables for input filtering
+$username = "";
+$phone = "";
+
+// Check if username filter is set and not empty
+if (isset($_GET['username']) && !empty($_GET['username'])) {
+    $username =  $_GET['username'];
+    $sql .= " WHERE username LIKE '%$username%'";
 }
 
-// Close connection
+// Check if phone filter is set and not empty
+if (isset($_GET['phone']) && !empty($_GET['phone'])) {
+    $phone =  $_GET['phone'];
+    // Adjust the query accordingly
+    if (strpos($sql, 'WHERE') === false) {
+        $sql .= " WHERE phone LIKE '%$phone%'";
+    } else {
+        $sql .= " AND phone LIKE '%$phone%'";
+    }
+}
+
+// Add ORDER BY clause
+$sql .= " ORDER BY id ASC";
+
+// -- pagination
+$page = 1;
+if(isset($_GET['page'])) {
+    $page = $_GET['page'];
+}
+$limit = 2; // no. cars per page
+$offset = ($page-1)*$limit;
+
+// -- count no.cars
+$sqlCount = "SELECT COUNT(*) AS noResults FROM ($sql) AS filteredResults";
+$result = mysqli_query($conn, $sqlCount);
+$noResults = mysqli_fetch_assoc($result)['noResults'];
+$noPages = ceil($noResults/$limit);
+
+$sql .= " LIMIT $limit OFFSET $offset ";
+
+// Execute SQL query
+$result = mysqli_query($conn, $sql);
+
+$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// free result
+@mysqli_free_result($result);
+
+// Close database connection
 mysqli_close($conn);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,18 +88,19 @@ mysqli_close($conn);
 
         <h1>All Users</h1>
         <form action="" method="get">
-            <div class="row my-3">
-                <div class="col-3">
-                    <input class="form-control" type="text" name="username" placeholder="User name" value="<?php echo htmlspecialchars($_GET['username'] ?? ''); ?>">
-                </div>
-                <div class="col-3">
-                    <input class="form-control" type="text" name="phone" placeholder="Phone" value="<?php echo htmlspecialchars($_GET['phone'] ?? ''); ?>">
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" type="submit">Filter</button>
-                </div>
-            </div>
-        </form>
+    <div class="row my-3">
+        <div class="col-3">
+            <input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
+        </div>
+        <div class="col-3">
+            <input class="form-control" type="text" name="phone" placeholder="Phone" value="<?php echo $phone; ?>">
+        </div>
+        <div class="col-3">
+            <button class="btn btn-primary" type="submit">Filter</button>
+        </div>
+    </div>
+</form>
+
 
 
         <?php if (!empty($error)) : ?>

@@ -59,6 +59,7 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
 // close connection
 @mysqli_close($conn);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,11 +125,11 @@ $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <a href="edit.php?cate_id=<?php echo $cate['cate_id']; ?>">
                         <img src="../assets/edit_icon.png" alt="Edit" width="20" height="20">
                     </a>
-                        <form class="d-inline" action="delete.php?cate_id=<?php echo $cate_id['cate_id']; ?>" method="POST" onsubmit="return confirm('Are you sure?');">
+                    <form class="d-inline" action="delete.php?cate_id=<?php echo $cate['cate_id']; ?>" method="POST" onsubmit="return confirm('Are you sure?');">
                             <button type="submit" class="btn btn-link">
                                 <img src="../assets/delete_icon1.png" alt="Delete" width="20" height="20">
                             </button>
-                        </form>
+                        </form>      
                     </td>
                 </tr>
             <?php endforeach; ?>
